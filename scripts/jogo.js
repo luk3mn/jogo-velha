@@ -22,11 +22,42 @@ function criaBlocos() {
     document.querySelector('.tab').appendChild(bloco);
   }
 }
+criaBlocos();
 
-function jodagas() {
+let jogador1=false;
+let jogador2=false;
+function player1() {
+  document.querySelector('.panel-player .player').innerHTML="Jogador 1";
+  jogador1=true;
+}
+
+function player2() {
+  document.querySelector('.panel-player .player').innerHTML="Jogador 2";
+  jogador2=true;
+}
+
+let started = false;
+function startGame() {
+
+  let btnAction = document.querySelector('#btn-action');
+  btnAction.addEventListener('click', () => {
+    document.querySelector('.container .panel-player button').style.backgroundColor='rgb(240, 73, 31)'
+    btnAction.innerHTML="DESISTIR"
+
+    started=true;
+    player1() // Indica o jogador que vai começar o game
+    document.querySelector('#player1').value=0
+    document.querySelector('#player2').value=0
+  })
+
+  // if (started) {
+  //   console.log(started)
+  // }
 
 }
 
+startGame()
+// console.log(started)
 // function showImage() {
 
 //   /* CRIA OS ELEMENTOS DE IMG */
@@ -45,7 +76,6 @@ function jodagas() {
   
 // }
 
-criaBlocos();
 
 /**** LÓGICA:
  * Uma opção é add as imagens na div que for clicada
