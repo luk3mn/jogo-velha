@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da velha</title>
+  <link rel="stylesheet" href="style/jogo-velha.css">
+  <link rel="stylesheet" href="style/modal.css">
+</head>
+<body>
+  <header>
+    <h1>Jogo da Velha</h1>
+  </header>
+  <main class="container">
+    
+    <div class="scoreboard">
+      <div class="score-player">
+        <span id="name-player">PLAYER 1</span>
+        <input class="score" type="text">
+      </div>
+      <div class="versus">
+        <img src="assets/versus.png" alt="versus">
+      </div>
+      <div class="score-player">
+        <span id="name-player">PLAYER 2</span>
+        <input class="score" type="text">
+      </div>
+    </div>
+
+    <div class="tab">
+      <!-- <div>
+        <img class="xis" src="assets/xis.png" alt="xis">
+        <img class="circle" src="assets/circle.png" alt="circle">
+      </div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div> -->
+    </div>
+    
+    <div class="panel-player">
+      <img id="open-rank" src="assets/rank.png" alt="rank">
+      <div class="player">
+        Player
+      </div>
+      <button id="btn-giveup">DESISTIR</button>
+    </div>
+
+  </main>
+  
+  <div class="modal-screen hidden" id="#show-modal">
+    <div class="modal">
+      <div class="modal-header"><img id="btn-close" src="assets/close.png" alt=""></div>
+      <div class="modal-body">
+        <p>Nome</p>
+        <p>Vitorias</p>
+        <p>Derrotas</p>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/modal.js"></script>
+  <script src="scripts/jogo.js"></script>
+</body>
+</html>
+
+
+<!-- 
+  NOTA:
+  - Tentar utilizar apenas uma div dos blocos em javasript e multiplicar ela NOVE vezes
+  - Tentar utilizar o sistema de "display: none" para colocar e tirar os icones de X e O
+  - Tentar incluir DUAS img dentro da div do bloco com js e so mostrar a imagem relacionada a vez do jogador
+ --> 

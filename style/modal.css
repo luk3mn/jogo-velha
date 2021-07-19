@@ -1,0 +1,40 @@
+.modal-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  top: 0;
+  left: 0;
+
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-screen .modal {
+  background-color: rgb(233, 233, 233);
+  width: 200px;
+}
+
+.modal-screen .modal .modal-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-screen .modal .modal-header img {
+  width: 35px;
+  height: 35px;
+  margin: .6rem
+}
+
+.modal-screen .modal .modal-body {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  padding: 0 1rem;
+}
+
+/* PARA ABRIR E FECHAR A MODAL */
+.hidden {
+  display: none;
+}

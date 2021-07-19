@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+header {
+  margin: 2rem 0;
+}
+
+header h1 {
+  text-align: center;
+}
+
+.container {
+  /* display: grid; */
+  /* grid-template-rows: 20% 20% 20%; */
+  height: 100vh;
+}
+
+/****** PLACAR DA RODADA ******/
+.container .scoreboard {
+  display: flex;
+  justify-content: center;
+
+  height: 4.4rem;
+  margin: 2rem .3rem;
+  border: 3px dashed red;
+  border-radius: .7rem;
+}
+
+.scoreboard .score-player {
+  display: grid;
+  justify-content: center;
+
+  padding: .5rem;
+  width: min(16rem, 100%);
+}
+
+.scoreboard .versus {
+  display: flex;
+  align-items: center;
+}
+
+.scoreboard .versus img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.scoreboard .score-player #name-player {
+  font-size: 11px;
+}
+
+.scoreboard .score-player .score {
+  background-color: rgb(161, 161, 161);
+  width: 6rem;
+  height: 1.4rem;
+  /* margin: 0 .5rem; */
+  outline: none;
+}
+
+/* CONSTRUÇÃO DO TABULEIRO */
+.container .tab {
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+  
+  width: min(30rem, 90%);
+  height: min(20rem, 50%);
+  margin: 0 auto;
+}
+
+.container .tab div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .tab div:nth-child(1) {
+  border-right: .35rem solid black;
+  border-bottom: .35rem solid black;
+}
+.container .tab div:nth-child(2) {
+  border-right: .35rem solid black;
+  border-bottom: .35rem solid black;
+}
+.container .tab div:nth-child(3) {
+  border-bottom: .35rem solid black;
+}
+
+.container .tab div:nth-child(4) {
+  border-right: .35rem solid black;
+  border-bottom: .35rem solid black;
+}
+.container .tab div:nth-child(5) {
+  border-right: .35rem solid black;
+  border-bottom: .35rem solid black;
+}
+.container .tab div:nth-child(6) {
+  border-bottom: .35rem solid black;
+}
+
+.container .tab div:nth-child(7) {
+  border-right: .35rem solid black;
+}
+.container .tab div:nth-child(8) {
+  border-right: .35rem solid black;
+}
+
+.container .tab div img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: -1rem;
+}
+
+/****** MOSTRA A IMAGEM CONFORME A JOGADA  ******/
+.container .tab div .xis {
+  display: none;
+}
+
+.container .tab div .circle {
+  display: none;
+}
+
+
+/****** MOSTRA A VEZ DE CADA JOGADOR ******/
+.container .panel-player { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 5rem;
+  margin: 2rem 0;
+}
+
+.panel-player #open-rank {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.panel-player .player {
+  border: 3px solid rgb(240, 73, 31);
+  border-radius: .3rem;
+  margin: 0 .5rem;
+  width: 10rem;
+  padding: .2rem 0;
+  text-align: center;
+}
+
+.container button {
+  background-color: rgb(240, 73, 31);
+  color: #fff;
+  padding: .4rem;
+  outline: none;
+  margin: 0 .5rem;
+  border: none;
+  border-radius: .3rem;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 521px) { 
+  .container .scoreboard {
+    width: 500px;
+    margin: 2rem auto;
+  }
+}
