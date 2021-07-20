@@ -160,6 +160,11 @@ header h1 {
   cursor: pointer;
 }
 
+.container .panel-player #btn-left {
+  background-color: rgb(240, 73, 31);
+}
+
+
 @media screen and (min-width: 521px) { 
   .container .scoreboard {
     width: 500px;
