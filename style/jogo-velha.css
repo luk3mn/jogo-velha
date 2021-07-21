@@ -60,6 +60,10 @@ header h1 {
   outline: none;
 }
 
+.scoreboard .score-player .score[type='number'] {
+  -moz-appearance:textfield;
+}
+
 /* CONSTRUÇÃO DO TABULEIRO */
 .container .tab {
   display: grid;
