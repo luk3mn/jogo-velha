@@ -2,6 +2,7 @@ let jogador1="X";
 let jogador2="O";
 let vezJogador="";
 let jogoIniciado=false;
+let notWinner=0;
 
 /******** CRINDO AS DIVS *********/
 function criaBlocos() {
@@ -55,21 +56,32 @@ function inGaming(e) {
   if(winnerGame()) {
     if (winnerGame() == jogador1) {
       alert("Jogador 1, Venceu!!!");
-    } else {
+    } else if (winnerGame() == jogador2) {
       alert("Jogador 2. Venceu!!!");
-    }
+    } 
     
+    // Recarrega a página
+    document.location.reload();
+  } else {
+    notWinner++;
+  }
+
+  if (notWinner == 9) {
+    alert("Empate!!!")
+
     // Recarrega a página
     document.location.reload();
   }
 }
 
 function winnerGame() {
-  let tab = [], winner="", nJogadas=0;
+  
+  let tab = [], winner="";
   for (let i=0; i < 9; i++) {
     tab[i] = document.querySelector('#b'+(i+1)).getAttribute("jogada")
   }
 
+  /* Lógica de jogadas */
   if (tab[4] != null) {
     if ((tab[4] == tab[0] && tab[4] == tab[8]) || (tab[4] == tab[2] && tab[4] == tab[6])) {
       winner=tab[4];
@@ -129,9 +141,12 @@ function startGame() {
 startGame()
 criaBlocos();
 
-/**** LÓGICA:
+/**** ANOTAÇÕES:
+ *  
+ * Incluir as figuras ao lado de player 1 e player 2,
+ * tanto no placar quanto na jogada da vez
  * 
- * Cria a logica de identificar quando tres figuras iguais estiverem alinhadas
- * Uma alternativa é criar um vetor o matriz e testar quando as posições combinarem
+ * Mostrar um resultado mais elaborado em vez de um
+ * alert comum
  * 
  ****/
