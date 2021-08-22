@@ -50,7 +50,14 @@ header h1 {
 }
 
 .scoreboard .score-player span {
+  display: flex;
+  align-items: center;
   font-size: 11px;
+}
+
+.scoreboard .score-player span img {
+  width: 12px;
+  margin: 0 .3rem;
 }
 
 .scoreboard .score-player .score {

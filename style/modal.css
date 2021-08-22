@@ -29,9 +29,10 @@
 }
 
 .modal-screen .modal .modal-body {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 33.3% 33.3% 33.3%;
-  padding: 0 1rem;
+  padding: 0 1rem; */
+  text-align: center;
 }
 
 /* PARA ABRIR E FECHAR A MODAL */

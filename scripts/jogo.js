@@ -23,11 +23,17 @@ function criaBlocos() {
 
 function player1() {
   document.querySelector('.panel-player .player').innerHTML="Jogador 1";
+  document.querySelector('.panel-player .player').appendChild(document.createElement('span'))
+  document.querySelector('.panel-player .player span').innerHTML="<img src='assets/xis.png' width='13px'>"
+  document.querySelector('.panel-player .player span').style.margin="10px"
   vezJogador = jogador1;
 }
 
 function player2() {
   document.querySelector('.panel-player .player').innerHTML="Jogador 2";
+  document.querySelector('.panel-player .player').appendChild(document.createElement('span'))
+  document.querySelector('.panel-player .player span').innerHTML="<img src='assets/circle.png' width='13px'>"
+  document.querySelector('.panel-player .player span').style.margin="10px"
   vezJogador = jogador2
 }
 
@@ -55,13 +61,26 @@ function inGaming(e) {
 
   if(winnerGame()) {
     if (winnerGame() == jogador1) {
-      alert("Jogador 1, Venceu!!!");
+      document.querySelector('.panel-player .player').innerHTML="<h4>Jogador 1, VENCEU!!</h4>"
+      document.querySelector('.panel-player .player').style.backgroundColor="rgba(41, 41, 41, 0.753)";
+      document.querySelector('.panel-player .player').style.color="white";
     } else if (winnerGame() == jogador2) {
-      alert("Jogador 2. Venceu!!!");
+      document.querySelector('.panel-player .player').innerHTML="<h4>Jogador 2, VENCEU!!</h4>"
+      document.querySelector('.panel-player .player').style.backgroundColor="rgba(223, 20, 20, 0.7)";
+      document.querySelector('.panel-player .player').style.color="white";
     } 
     
-    // Recarrega a página
-    document.location.reload();
+    document.querySelector('#btn-left').style.display="none"
+    let finalizar = document.querySelector('#btn-end')
+    finalizar.style.display="block";
+    finalizar.style.backgroundColor="rgba(245, 3, 193, 0.753)"
+    
+    // Para finalizar
+    finalizar.addEventListener("click", () => {
+      // Recarrega a página
+      document.location.reload();
+    })
+    console.log(finalizar.value)
   } else {
     notWinner++;
   }
@@ -143,10 +162,10 @@ criaBlocos();
 
 /**** ANOTAÇÕES:
  *  
- * Incluir as figuras ao lado de player 1 e player 2,
- * tanto no placar quanto na jogada da vez
- * 
  * Mostrar um resultado mais elaborado em vez de um
  * alert comum
+ * 
+ * Ajustar no CSS para não sobrar margem na altura,
+ * tanto no desktop quanto no mobile
  * 
  ****/
