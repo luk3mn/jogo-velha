@@ -26,7 +26,7 @@ function player1() {
   document.querySelector('.panel-player .player').appendChild(document.createElement('span'))
   document.querySelector('.panel-player .player span').innerHTML="<img src='assets/xis.png' width='13px'>"
   document.querySelector('.panel-player .player span').style.margin="10px"
-  vezJogador = jogador1;
+  vezJogador = jogador1; // passar a vez para o jogador 1
 }
 
 function player2() {
@@ -34,7 +34,7 @@ function player2() {
   document.querySelector('.panel-player .player').appendChild(document.createElement('span'))
   document.querySelector('.panel-player .player span').innerHTML="<img src='assets/circle.png' width='13px'>"
   document.querySelector('.panel-player .player span').style.margin="10px"
-  vezJogador = jogador2
+  vezJogador = jogador2 // passar a vez para o jogador 2
 }
 
 /* LOGIDA DO FUNCIONAMENTO DA RODADA */
@@ -161,9 +161,6 @@ startGame()
 criaBlocos();
 
 /**** ANOTAÇÕES:
- *  
- * Mostrar um resultado mais elaborado em vez de um
- * alert comum
  * 
  * Ajustar no CSS para não sobrar margem na altura,
  * tanto no desktop quanto no mobile
